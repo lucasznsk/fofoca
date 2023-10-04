@@ -1,10 +1,9 @@
-"use client";
-import useSWR from "swr";
-
-export default function Page() {
-  const { data } = useSWR("/api/test", () =>
-    fetch("https://localhost:3000/api/test").then((r) => r.json())
-  );
-
-  return <h1>{data}</h1>;
+export default async function Page() {
+  const fofoca = async () => {
+    await fetch('/api/example', {
+      method: 'GET',
+    });
+  };
+  console.log('fofoca', fofoca);
+  return <h1></h1>;
 }
