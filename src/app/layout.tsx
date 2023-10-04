@@ -1,9 +1,10 @@
-import { NavBar } from '@/components/NavBar/NavBar';
+import "../styles/global.css";
+import { NavBar } from "@/components/NavBar/NavBar";
 
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Next.js',
+  title: "Next.js",
 };
 
 export default function RootLayout({

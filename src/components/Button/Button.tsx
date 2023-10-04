@@ -1,15 +1,19 @@
-'use client';
+import { ButtonHTMLAttributes } from "react";
 
-interface IPropsButton {
+interface IPropsButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
-  onClick: any;
   value: string;
 }
 
-export const Button = ({ label, onClick, value }: IPropsButton) => {
+export const Button = ({ label, value, ...props }: IPropsButton) => {
   return (
     <div>
-      <button value={value} type="button" onClick={onClick}>
+      <button
+        type="button"
+        {...props}
+        className="bg-black"
+        style={{ color: "red" }}
+      >
         {label}
       </button>
     </div>
